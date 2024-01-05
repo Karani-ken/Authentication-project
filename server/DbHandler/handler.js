@@ -27,7 +27,7 @@ const createDatabaseIfNotExists = async ()=>{
         const DatabaseExists = result.some(db => db.Database === dbConfig.database);
         if(!DatabaseExists){
             await executeQuery(queries.createDatabase);
-            console.log('database creates successfully');
+            console.log('database created successfully');
         }else{
             console.log("database already exists");
         }
